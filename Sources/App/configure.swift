@@ -17,6 +17,8 @@ public func configure(_ app: Application) throws {
 
     app.migrations.add(CreateTodo())
 
+    app.http.server.configuration.port = 5000
+    
     // register routes
     try routes(app)
 }
